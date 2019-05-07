@@ -1,28 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-    using System.Collections.Generic;       //Allows us to use Lists. 
-    using UnityEngine.UI;                   //Allows us to use UI.
+    using System.Collections.Generic;       
+    using UnityEngine.UI;                  
 using Completed;
 
 public class GameManager : MonoBehaviour
     {
-        public float levelStartDelay = 2f;                      //Time to wait before starting level, in seconds.
-        public float turnDelay = 0.1f;                          //Delay between each Player turn.
-        public int playerFoodPoints = 100;                      //Starting value for Player food points.
-        public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-        [HideInInspector] public bool playersTurn = true;       //Boolean to check if it's players turn, hidden in inspector but public.
+        public float levelStartDelay = 2f;                      
+        public float turnDelay = 0.1f;                          
+        public int playerFoodPoints = 100;                      
+        public static GameManager instance = null;              
+        [HideInInspector] public bool playersTurn = true;       
 
-
-        private Text levelText;                                 //Text to display current level number.
-        private GameObject levelImage;                          //Image to block out level as levels are being set up, background for levelText.
-        private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
-        private int level = 1;                                  //Current level number, expressed in game as "Day 1".
-        private List<Enemy> enemies;                            //List of all Enemy units, used to issue them move commands.
-        private bool enemiesMoving;                             //Boolean to check if enemies are moving.
-        private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
-
-
+        private Text levelText;                                 
+        private GameObject levelImage;                          
+        private BoardManager boardScript;                       
+        private int level = 1;                                  
+        private List<Enemy> enemies;                            
+        private bool enemiesMoving;                             
+        private bool doingSetup = true;                         
 
         //Awake is always called before any Start functions
         void Awake()
