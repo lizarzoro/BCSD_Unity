@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-
-namespace Completed
-{
     using System.Collections.Generic;       //Allows us to use Lists. 
     using UnityEngine.UI;                   //Allows us to use UI.
+using Completed;
 
-    public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
     {
         public float levelStartDelay = 2f;                      //Time to wait before starting level, in seconds.
         public float turnDelay = 0.1f;                          //Delay between each Player turn.
@@ -177,7 +175,7 @@ namespace Completed
             enemiesMoving = false;
         }
     }
-}
+
 
 //using UnityEngine;
 //using System.Collections;
